@@ -16,8 +16,8 @@
 #define ECHO_VALID	1
 #define ECHO_UNVALID	0
 
-#define HC_SR04_ECHO_PIN	5 /* UDOO Neo J4 pin 18 */
-#define HC_SR04_TRIG_PIN	6 /* UDOO Neo J4 pin 19 */
+#define HC_SR04_ECHO_PIN	5
+#define HC_SR04_TRIG_PIN	6
 
 static int gpio_irq = -1;
 static int echo_valid_flag = 0;
@@ -202,8 +202,6 @@ static void __exit hc_sr04_exit(void)
 module_init(hc_sr04_init);
 module_exit(hc_sr04_exit);
 
-MODULE_AUTHOR("Tushar Panda");
-MODULE_AUTHOR("Chunghan Yi");
 MODULE_AUTHOR("gun");
 MODULE_DESCRIPTION("hc-sr04 ultrasonic distance sensor driver");
 MODULE_LICENSE("GPL");
